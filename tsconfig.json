@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/",
+      "noImplicitAny": true,
+      "moduleResolution": "node",
+      "allowJs": false,
+      "sourceMap": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "lib": ["dom", "esnext"]
+    }
+}

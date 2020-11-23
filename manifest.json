@@ -1,0 +1,7 @@
+{
+    "name": "Requestore",
+    "version": "1.0",
+    "description": "Report all requests and their efficiency.",
+    "devtools_page": "devtools.html",
+    "manifest_version": 2
+}
