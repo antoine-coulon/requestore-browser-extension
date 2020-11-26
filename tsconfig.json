@@ -5,6 +5,8 @@
       "moduleResolution": "node",
       "allowJs": false,
       "sourceMap": true,
+      "downlevelIteration": true,
+      "target": "ES5",
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
       "lib": ["dom", "esnext"]

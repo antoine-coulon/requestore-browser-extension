@@ -1,0 +1,15 @@
+<div class="filter-wrapper">
+    <h3> Requests filter </h3>
+
+    <div class="filter-list">
+        <ng-container *ngFor="let filter of availableFilters">
+            <div class="filter" (click)="updateFilter(filter)">
+                <div [ngClass]="isFilterActivated(filter) ? 'applied-filter' : 'unapplied-filter'"></div>
+                <b>{{ filter }}</b>
+                <i class="fas fa-check-circle fa-2x" *ngIf="isFilterActivated(filter)"></i>
+                <i class="fas fa-times-circle fa-2x" *ngIf="!isFilterActivated(filter)"></i>
+            </div>
+        </ng-container>
+        
+    </div>
+</div>

@@ -1,0 +1,21 @@
+.request-list {
+  padding: 12px;
+  margin-top: 5px;
+  list-style-type: none;
+  max-height: 300px;
+  overflow: auto;
+  box-shadow: 0px 0px 4px 2px #0000002e;
+}
+
+li {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 8px 8px;
+  font-size: 17px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 3px 1px rgb(214 214 214);
+  -moz-box-shadow: 0px 0px 3px 1px rgb(214 214 214);
+  box-shadow: 0px 0px 3px 1px rgb(214 214 214);
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,19 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+* {
+  font-family: "Fira Code", monospace;
+}
+body {
+  padding: 12px;
+}
+
+.head-title {
+  margin-top: 0;
+}
+
+.padding-layer {
+  padding: 9px;
+}

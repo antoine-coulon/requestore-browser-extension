@@ -1,0 +1,72 @@
+.flex-column-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+}
+
+.tab-menu {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 290px));
+  grid-gap: 20px;
+  justify-content: start;
+}
+
+.tablink {
+  background: #ced1d1;
+  color: black;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s all;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 90%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  border-radius: 5px;
+  -webkit-box-shadow: -2px 3px 45px -19px rgba(0, 0, 0, 0.81);
+  -moz-box-shadow: -2px 3px 45px -19px rgba(0, 0, 0, 0.81);
+  box-shadow: -2px 3px 45px -19px rgba(0, 0, 0, 0.81);
+}
+
+.tablink:hover {
+  background-color: rgb(7 188 138 / 90%);
+  color: white;
+  cursor: pointer;
+}
+
+.active {
+  background: rgb(7 188 138 / 90%);
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  height: 100%;
+}
+
+.flex-wrapper {
+  display: flex;
+  padding: 10px 30px;
+  justify-content: space-between;
+}
+
+.request-chain {
+  width: 40%;
+}
+
+.request-performances {
+  width: 100%;
+  margin-left: 50px;
+}
+
+.ul-wrapper {
+  max-height: 300px;
+  overflow-y: auto;
+  width: 35%;
+}

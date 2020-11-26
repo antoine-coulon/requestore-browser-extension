@@ -1,0 +1,26 @@
+.head-performance {
+  font-size: 32px;
+  text-align: center;
+}
+
+.performances-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+.performances-wrapper > div {
+  text-align: center;
+}
+
+.orange-highlighted {
+  color: rgb(192, 51, 0);
+}
+
+.red-highlighted {
+  color: rgb(143, 0, 0);
+}
+
+.green-highlighted {
+  color: rgb(7 188 138 / 90%);
+}

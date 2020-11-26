@@ -1,0 +1,15 @@
+<h2> {{ category | uppercase }} </h2>
+
+<ul class="request-list" *ngIf="requestListArray; else noRequestYet">    
+   <li *ngFor="let request of requestListArray"> 
+       <b> 
+        {{ request.time }} ms
+       </b>
+
+       <b> ({{ request.size }} KB) </b>
+   </li> 
+</ul>
+
+<ng-template #noRequestYet>
+    No captured requests yet.
+</ng-template>

@@ -1,0 +1,34 @@
+<div class="flex-column-wrapper">
+
+
+    ({{ globalRequestsData.filteredRequestsSize }}) filtered requests / ({{ globalRequestsData.allRequestsSize }}) requests
+   
+    <div class="tab-menu">
+        <div 
+            class="tablink" 
+            *ngFor="let tab of tabs" 
+            [ngClass]="currentTab === tab ? 'active' : ''" (click)="changeTab(tab)">
+            {{ tab }}
+        </div>
+    </div>
+     
+    <ng-container *ngFor="let tab of tabs" >
+        
+        <div class="flex-wrapper" *ngIf="tab === currentTab">
+            <div class="request-chain">
+                <div class="tabcontent">
+                    <request-list [requestList]="requestsByCategory" [category]="tab"></request-list>
+                </div>
+            </div>
+    
+            <div class="request-performances">
+                <request-performances 
+                [requestList]="requestsByCategory" 
+                [category]="tab"
+                [globalRequestoreData]="globalRequestsData"></request-performances>
+            </div>
+        </div>
+    </ng-container>
+    
+</div>
+

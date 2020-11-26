@@ -1,0 +1,32 @@
+<h2> PERFORMANCES </h2>
+
+
+<div class="performances-wrapper">
+
+    <div>
+        <b class="head-performance">{{ averageTimePerRequest }} ms </b>
+        <p>average time per request</p>
+    </div>
+
+    <div>
+        <b class="head-performance">{{ requestListArray.length }} </b>
+        <p>captured requests</p>
+    </div>
+
+    <div>
+        <b class="head-performance" 
+        [ngClass]="higherRequestTime > 350 ? 'red-highlighted' : 'orange-highlighted'">
+        {{ higherRequestTime }}  ms
+        </b>
+        <p>highest request time</p>
+    </div>
+
+    <div>
+        <b class="head-performance" 
+        [ngClass]="lowestRequestTime > 250 ? 'orange-highlighted' : 'green-highlighted'">
+        {{ lowestRequestTime }} ms
+        </b>
+        <p>lowest request time</p>
+    </div>
+
+</div>

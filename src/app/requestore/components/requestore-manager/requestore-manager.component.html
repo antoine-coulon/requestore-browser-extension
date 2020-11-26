@@ -1,0 +1,23 @@
+<div class="request-manager">
+
+    <ng-container *ngIf="isRecording; else notRecording">
+        <button class="stop-recording-btn" (click)="changeRecordingStatus()"> 
+            Stop recording <i class="far fa-stop-circle"></i>
+        </button>
+    </ng-container>
+    
+    <ng-template #notRecording>
+        <button class="start-recording-btn" (click)="changeRecordingStatus()"> 
+            Start recording <i class="far fa-play-circle"></i>
+        </button>
+    </ng-template>
+
+    <button class="add-filter-btn" (click)="openSettings()"> 
+        Settings <i class="fas fa-cog"></i>
+    </button>
+
+</div>
+
+<div class="filters" *ngIf="openedSettings">
+    <request-filters [currentFilters]="filters"></request-filters>
+</div>
