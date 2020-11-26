@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { RequestoreService } from '../../services/requestore.service';
+import { NetworkActivityService } from '../../services/network-activity.service';
 import { pluck, tap } from 'rxjs/operators';
 import { StorageService } from '../../services/storage.service';
 
@@ -17,12 +17,12 @@ export class CategoryTabsComponent implements OnInit {
     requestsByCategory: Observable<any>;
 
     constructor(
-        private readonly _requestoreService: RequestoreService,
+        private readonly _networkActivityService: NetworkActivityService,
         private readonly _storageService: StorageService,
         private cd: ChangeDetectorRef) { }
 
     ngOnInit() {
-        this.requestsByCategory = this._requestoreService.getRequestorObservable().pipe(
+        this.requestsByCategory = this._networkActivityService.networkActivityAsObservable.pipe(
             pluck('requests'),
             tap(_ => {
                 this.cd.detectChanges();
@@ -36,7 +36,7 @@ export class CategoryTabsComponent implements OnInit {
     }
 
     get globalRequestsData() {
-        return this._requestoreService.globalRequestoreData;
+        return this._networkActivityService.globalRequestoreData;
     }
 
     changeTab(tab: string) {

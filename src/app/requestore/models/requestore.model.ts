@@ -24,4 +24,9 @@ export class RequestoreModel {
     setCategories(filters: Set<string>) {
         this.categories = filters;
     }
+
+    addRequest(category: string, request: { time: number, size: number} ) {
+        this.requests[category] = [...this.requests[category], request];
+        this.globalData.filteredRequestsSize += 1;
+    }
 }

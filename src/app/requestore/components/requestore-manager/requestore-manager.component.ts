@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RequestoreService } from '../../services/requestore.service';
+import { NetworkActivityService } from '../../services/network-activity.service';
 import { StorageService } from '../../services/storage.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class RequestoreManagerComponent {
     openedSettings: boolean = false;
 
     constructor(
-        private readonly _requestoreService: RequestoreService,
+        private readonly _networkActivityService: NetworkActivityService,
         private readonly _storageService: StorageService
     ) {
     }
@@ -27,13 +27,13 @@ export class RequestoreManagerComponent {
     }
 
     get isRecording() {
-        return this._requestoreService.isRecording;
+        return this._networkActivityService.isRecording;
     }
 
     changeRecordingStatus(): void {
         this.isRecording ?
-            this._requestoreService.stopRecordingNetworkActivity() 
-            : this._requestoreService.startRecordingNetworkActivity();
+            this._networkActivityService.stopRecordingNetworkActivity() 
+            : this._networkActivityService.startRecordingNetworkActivity();
     }
 
     openSettings() {

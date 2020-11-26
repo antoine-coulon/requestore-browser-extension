@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from "@angular/core";
-import { RequestoreService } from "./requestore/services/requestore.service";
+import { NetworkActivityService } from "./requestore/services/network-activity.service";
 
 @Component({
   selector: "requestore-app",
@@ -8,11 +8,11 @@ import { RequestoreService } from "./requestore/services/requestore.service";
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit {
-  constructor(private readonly _requestoreService: RequestoreService) {}
+  constructor(private readonly _networkActivityService: NetworkActivityService) {}
 
   ngOnInit() {}
 
   get isRecording() {
-    return this._requestoreService.isRecording;
+    return this._networkActivityService.isRecording;
   }
 }

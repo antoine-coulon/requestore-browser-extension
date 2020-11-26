@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { availableFilters } from './filters';
-import { RequestoreService } from './requestore.service';
+import { NetworkActivityService } from './network-activity.service';
+
+
 @Injectable({providedIn: 'root'})
 export class StorageService {
 
@@ -8,11 +10,11 @@ export class StorageService {
     private _reportsHistory: any[];
     private _filters: Set<string>;
 
-    constructor(private _requestoreService: RequestoreService) {
+    constructor(private _networkActivityService: NetworkActivityService) {
         this.retrieveConfig();
         this.retrieveFilters();
         this.retrieveHistory();
-        this._requestoreService.requestoreModel.setCategories(this.filters);
+        this._networkActivityService.requestoreModel.setCategories(this.filters);
     }
 
     get config() {
